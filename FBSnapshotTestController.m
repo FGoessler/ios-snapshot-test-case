@@ -171,7 +171,10 @@ typedef struct RGBAPixel {
   }
 
   NSLog(@"If you have Kaleidoscope installed you can run this command to see an image diff:\n"
-        @"ksdiff \"%@\" \"%@\"", referencePath, testPath);
+        @"ksdiff \"%@\" \"%@\"\n\n", referencePath, testPath);
+	
+  NSLog(@"Run the following command to show the snapshots in the Preview App:\n"
+		  @"open -a Preview \"%@\" \"%@\" \"%@\"\n\n", referencePath, testPath, diffPath);
 
   return YES;
 }
